@@ -1,10 +1,116 @@
 :root {
     --font: Arial;
+    --font-size-header: 2rem;
+    --font-size-subheader: 1.5rem;
+    --font-size-content: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
 body {
-    display:block;
-    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 225, 213);
+    color: rgb(78, 78, 78);
+    align-items: center;
+}
+
+.section {
+    margin: 1rem;
+    width: 90%;
+}
+
+.header {
+    font-size: var(--font-size-header);
+}
+
+.subheader {
+    font-size: var(--font-size-subheader);
+}
+
+#about {
+    display: block;
+    height: fit-content;
+}
+
+#syl-image {
+    float: right;
+    padding: 10px 10px;
+}
+
+#about .subheader {
+    margin-top: -5px;
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
 
 }
+
+.item {
+    padding: 1rem;
+}
+
+/* hand-drawn-box: https://codepen.io/theadhocracy/pen/PoPddLB */
+.hand-drawn-box {
+    position: relative;
+    box-sizing: border-box;
+    border-top: none;
+    border-bottom: none;
+    width: max-content;
+    border: 4px solid black;
+    padding: 1rem 1rem;
+    height: 100%;
+    width: 90%;
+    border-width: 4px 5px 4px 3px;
+    border-top-left-radius: 0.25% 275px ;
+    border-top-right-radius: 300px 0.1%;
+    border-bottom-right-radius: 0.3% 355px;
+    border-bottom-left-radius: 360px 2%;
+    transform: rotate(-0.25deg);
+  /*  original    */
+  /*   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */
+  /*   small height, any width   */
+  /*   border-radius: 25px 360px 30px 300px/275px 25px 255px 25px; */
+  }
+  
+.hand-drawn-box *{
+    transform: rotate(0.25deg);
+  }
+
+.box {
+    position: relative;
+    box-sizing: border-box;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 2rem;
+  }
+  
+.hand-drawn-box:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    padding: 0 2rem;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 20%, 98% 60%, 0 100%, 0 0);
+    box-sizing: border-box;
+  }
+  
+  .hand-drawn-box:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    padding: 0 2rem;
+    clip-path: polygon(50% 0%, 99.87% -25.11%, 99.94% 125.11%, 8% 80%, 0.56% 80.23%, -7px 0px);
+    box-sizing: border-box;
+  }
